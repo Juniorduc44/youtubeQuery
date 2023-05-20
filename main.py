@@ -1,3 +1,4 @@
+# v0.0.1
 from langchain.document_loaders import YoutubeLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
@@ -68,9 +69,9 @@ def get_response_from_query(db, query, k=4):
 
 
 # Example usage:
-video_url = input("Enter the youtube URL: ")
+video_url = input("Enter the youtube URL: \n")
 db = create_db_from_youtube_video_url(video_url)
 
-query = input("Ask a question about the video: ")
+query = input("Ask a question about the video: \n")
 response, docs = get_response_from_query(db, query)
 print(textwrap.fill(response, width=50))
